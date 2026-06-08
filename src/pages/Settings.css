@@ -4,30 +4,58 @@
   margin-bottom: 1.5rem;
 }
 
-.image-preview {
-  width: 100px;
-  height: 100px;
+.image-upload-wrapper {
+  width: 120px;
+  height: 120px;
   border: 2px dashed var(--color-border);
   border-radius: var(--radius-md);
   display: flex;
   align-items: center;
   justify-content: center;
-  cursor: pointer;
-  overflow: hidden;
-  color: var(--color-text-muted);
-  transition: var(--transition);
+  position: relative;
+  overflow: visible; /* Changed from hidden to show the X button */
   background-color: var(--color-background);
+  transition: var(--transition);
 }
 
-.image-preview:hover {
+.image-upload-wrapper:hover {
   border-color: var(--color-primary);
   color: var(--color-primary);
 }
 
-.image-preview img {
+.preview-image {
   width: 100%;
   height: 100%;
   object-fit: contain;
+  border-radius: calc(var(--radius-md) - 2px);
+}
+
+.upload-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-muted);
+  font-size: 0.8rem;
+  gap: 0.5rem;
+}
+
+.file-input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 2;
+}
+
+@media (max-width: 400px) {
+  .image-upload-group {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
 }
 
 .form-grid {
