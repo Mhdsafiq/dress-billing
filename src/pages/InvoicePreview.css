@@ -1,0 +1,266 @@
+.invoice-preview-container {
+  padding: 1rem;
+  background-color: #E2E8F0;
+  min-height: 100vh;
+  padding-bottom: 80px;
+}
+
+.invoice-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.invoice-paper {
+  background: white;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  box-shadow: var(--shadow-lg);
+  color: #333;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+}
+
+/* Header */
+.inv-header {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px solid #E2E8F0;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+
+.inv-logo {
+  width: 120px;
+  display: flex;
+  align-items: center;
+}
+
+.inv-logo img {
+  max-width: 100%;
+  max-height: 80px;
+}
+
+.placeholder-logo {
+  width: 80px;
+  height: 80px;
+  background: #E2E8F0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: #94A3B8;
+  border-radius: 8px;
+}
+
+.inv-company-details {
+  flex: 1;
+  padding: 0 1rem;
+}
+
+.company-name {
+  color: #1E3A8A; /* Dark blue from the reference */
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+  text-transform: uppercase;
+}
+
+.tagline {
+  color: #64748B;
+  font-style: italic;
+  margin-bottom: 0.5rem;
+}
+
+.reg-info, .contact-info, .address-info {
+  color: #475569;
+  margin-bottom: 0.25rem;
+}
+
+.inv-title-box {
+  text-align: right;
+}
+
+.inv-title-box h2 {
+  color: #1E3A8A;
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.original-badge {
+  border: 1px solid #CBD5E1;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.7rem;
+  color: #64748B;
+  border-radius: 4px;
+}
+
+/* Meta & Addresses */
+.inv-meta {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 1rem;
+}
+
+.inv-addresses {
+  display: flex;
+  border: 1px solid #E2E8F0;
+  margin-bottom: 1rem;
+}
+
+.address-box {
+  flex: 1;
+  padding: 1rem;
+}
+
+.address-box:first-child {
+  border-right: 1px solid #E2E8F0;
+}
+
+.box-title {
+  color: #1E3A8A;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.address-box p {
+  color: #475569;
+  margin-top: 0.25rem;
+}
+
+/* Table */
+.inv-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.inv-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1.5rem;
+  font-size: 0.8rem;
+  min-width: 320px;
+}
+
+.inv-table th {
+  background-color: #E0E7FF;
+  color: #1E3A8A;
+  padding: 0.75rem 0.5rem;
+  text-align: left;
+  font-weight: 600;
+}
+
+.inv-table td {
+  padding: 0.75rem 0.5rem;
+  border-bottom: 1px solid #F1F5F9;
+}
+
+.inv-table .tax-percent {
+  font-size: 0.7rem;
+  color: #64748B;
+}
+
+.inv-table tfoot td {
+  background-color: #E0E7FF;
+  color: #1E3A8A;
+  border-top: 1px solid #CBD5E1;
+}
+
+.text-right { text-align: right; }
+.font-bold { font-weight: 700; }
+
+/* Summary */
+.inv-summary-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.spacer { flex: 1; }
+
+.inv-calc {
+  width: 300px;
+}
+
+.calc-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  color: #475569;
+}
+
+.grand-total-row {
+  border-top: 1px solid #CBD5E1;
+  border-bottom: 1px solid #CBD5E1;
+  padding: 0.5rem 0;
+  font-weight: 700;
+  color: #0F172A;
+  font-size: 1rem;
+  margin: 1rem 0;
+}
+
+.amount-in-words {
+  margin-top: 2rem;
+  color: #475569;
+}
+
+.signature-box {
+  margin-top: 3rem;
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.signature-box img {
+  max-height: 50px;
+  margin-bottom: 0.5rem;
+}
+
+.sig-line {
+  border-top: 1px solid #94A3B8;
+  padding-top: 0.25rem;
+  width: 150px;
+  color: #64748B;
+}
+
+.sig-name {
+  color: #1E3A8A;
+  font-weight: 600;
+  margin-top: 0.25rem;
+}
+
+.inv-footer {
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 0.75rem;
+  color: #94A3B8;
+  border-top: 1px solid #F1F5F9;
+  padding-top: 1rem;
+}
+
+@media print {
+  @page {
+    margin: 0;
+    size: A4;
+  }
+  body {
+    background: white;
+  }
+  .invoice-preview-container {
+    padding: 0;
+    background: white;
+  }
+  .invoice-paper {
+    box-shadow: none;
+    max-width: 100%;
+    padding: 10mm;
+  }
+  .no-print {
+    display: none !important;
+  }
+}
